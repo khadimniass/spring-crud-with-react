@@ -7,11 +7,11 @@ public class Employee {
    @Id
    @GeneratedValue(strategy = GenerationType.IDENTITY)
    private int id;
-   @Column(name = "first_name")
+   @Column(name = "first_name",length = 100)
    private String firstName;
-   @Column(name = "last_name")
+   @Column(name = "last_name",length = 100)
    private String lastName;
-   @Column(name = "email_id")
+   @Column(name = "email_id",unique = true,length = 180,nullable = false)
    private String emailId;
 
     public Employee(){
